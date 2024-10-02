@@ -3,12 +3,9 @@
 def add_everything_up(a, b):
     # блок try проверки работы кода на ошибки и  если ошибки нет вернет res
     try:
-        # ввод промежуточных переменных типов int (c) и float (d)
-        c = int()
-        d = float()
         # условие проверки, что а и b - числа
-        if (type(a) or type(b)) == type(c) or (type(a) or type(b)) == type(d):
-            # присвоение переменной res суммы чисел с округлением до 3
+        if (isinstance(a, (int, float))) == True and (isinstance(b, (int, float))) == True:
+            # присвоение переменной res суммы чисел с округлением до 3 знаков после запятой
             res = round(a + b, 3)
         else:
             res = a + b
